@@ -1,13 +1,14 @@
 import React from 'react';
 import classes from './Toolbar.module.css';
 import Logo from '../../Logo/Logo';
+import NavItens from '../NavItens/NavItems';
 
 const toolbar = (props) => (
     <header className={classes.Toolbar}>
         <div>MENU</div>
-        <Logo />
-        <nav>
-            ...
+        <Logo height="80%"/>
+        <nav className={classes.DesktopOnly}>
+            <NavItens />
         </nav>
     </header>
 );
