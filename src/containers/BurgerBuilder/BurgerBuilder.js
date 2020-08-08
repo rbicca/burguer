@@ -96,30 +96,31 @@ const BurgerBuilder = (props) => {
 
     const purchaseContinueHandler = () => {
         //alert('You got it!');
-        const order = {
-            ingredients: ingredients,
-            price: price,
-            customer: {
-                name: 'Kuka',
-                address: {
-                    street: 'Av. Copacabana',
-                    zipCode: '91900-050',
-                    country: 'Brasil'
-                },
-                email: 'ronaldo.bicca@gmail.com'
-            },
-            deliveryMethod: 'fastest'
-        };
-        setLoading(true);
-        axios.post('/orders.json', order)
-                .then(response => { 
-                    setLoading(false); 
-                    setPurchasing(false);
-                })
-                .catch(error => { 
-                    setLoading(false);
-                    setPurchasing(false);
-                });
+        // const order = {
+        //     ingredients: ingredients,
+        //     price: price,
+        //     customer: {
+        //         name: 'Kuka',
+        //         address: {
+        //             street: 'Av. Copacabana',
+        //             zipCode: '91900-050',
+        //             country: 'Brasil'
+        //         },
+        //         email: 'ronaldo.bicca@gmail.com'
+        //     },
+        //     deliveryMethod: 'fastest'
+        // };
+        // setLoading(true);
+        // axios.post('/orders.json', order)
+        //         .then(response => { 
+        //             setLoading(false); 
+        //             setPurchasing(false);
+        //         })
+        //         .catch(error => { 
+        //             setLoading(false);
+        //             setPurchasing(false);
+        //         });
+        props.history.push('/checkout');
     }
 
     const disabledInfo = {
